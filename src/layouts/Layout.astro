@@ -2,23 +2,24 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <!doctype html>
-<html lang="es"> 
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>
-		DenisBets - Página web de apuestas deportivas enfocada en el fútbol por un tipster o pronosticador deportivo profesional.
-	</title>
+    <title>
+      DenisBets - Página web de apuestas deportivas enfocada en el fútbol por un tipster o pronosticador deportivo profesional.
+    </title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
-	<Header />
+  <body class="bg-cover bg-center bg-no-repeat" style="background-image: url('/images/Fondo_web2.jpg');">
+    <Header />
     <slot />
-	<Footer />
+    <Footer />
   </body>
 </html>
 
@@ -28,5 +29,10 @@ import Footer from '../components/Footer.astro';
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center;
   }
 </style>
