@@ -5,21 +5,21 @@
 <header class="bg-transparent text-white py-4 px-6">
   <div class="flex items-center justify-between relative">
     <!-- Logo a la izquierda -->
-    <img src="/images/Logo_transparente.png" alt="Logo" class="h-12 w-auto" />
+    <img src="/images/Logo_transparente.png" alt="Logo" class="h-12 w-auto z-10" />
 
-    <!-- Menú centrado en toda la pantalla -->
-    <nav class="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 flex justify-center">
-      <ul class="flex space-x-6">
-        <li><a href="/servicios" class="hover:text-gray-200">SERVICIOS</a></li>
-        <li><a href="/mi-metodo" class="hover:text-gray-200">MI MÉTODO</a></li>
-        <li><a href="/sigueme" class="hover:text-gray-200">SÍGUEME</a></li>
-        <li><a href="/about" class="hover:text-gray-200">SOBRE MÍ</a></li>
-        <li><a href="/escribeme" class="hover:text-gray-200">ESCRÍBEME</a></li>
+    <!-- Menú centrado en pantallas grandes -->
+    <nav class="hidden md:flex absolute left-0 right-0 top-1/2 transform -translate-y-1/2 justify-center">
+      <ul class="flex space-x-4 lg:space-x-6 drop-shadow-[0_0_1.5px_grey]">
+        <li><a href="/servicios" class="text-lg lg:text-xl hover:text-gray-200">SERVICIOS</a></li>
+        <li><a href="/mi-metodo" class="text-lg lg:text-xl hover:text-gray-200">MI MÉTODO</a></li>
+        <li><a href="/sigueme" class="text-lg lg:text-xl hover:text-gray-200">SÍGUEME</a></li>
+        <li><a href="/about" class="text-lg lg:text-xl hover:text-gray-200">SOBRE MÍ</a></li>
+        <li><a href="/escribeme" class="text-lg lg:text-xl hover:text-gray-200">ESCRÍBEME</a></li>
       </ul>
     </nav>
 
     <!-- Menú móvil -->
-    <div class="md:hidden">
+    <div class="md:hidden z-10">
       <button class="text-white focus:outline-none" id="menu-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -29,13 +29,13 @@
   </div>
 
   <!-- Menú desplegable (móvil) -->
-  <div class="md:hidden hidden" id="menu">
+  <div class="md:hidden hidden absolute top-full left-0 w-full bg-black bg-opacity-90" id="menu">
     <ul class="flex flex-col items-center space-y-4 py-4">
-      <li><a href="/servicios" class="hover:text-gray-200">SERVICIOS</a></li>
-      <li><a href="/mi-metodo" class="hover:text-gray-200">MI MÉTODO</a></li>
-      <li><a href="/sigueme" class="hover:text-gray-200">SÍGUEME</a></li>
-      <li><a href="/about" class="hover:text-gray-200">SOBRE MÍ</a></li>
-      <li><a href="/escribeme" class="hover:text-gray-200">ESCRÍBEME</a></li>
+      <li><a href="/servicios" class="text-lg hover:text-gray-200">SERVICIOS</a></li>
+      <li><a href="/mi-metodo" class="text-lg hover:text-gray-200">MI MÉTODO</a></li>
+      <li><a href="/sigueme" class="text-lg hover:text-gray-200">SÍGUEME</a></li>
+      <li><a href="/about" class="text-lg hover:text-gray-200">SOBRE MÍ</a></li>
+      <li><a href="/escribeme" class="text-lg hover:text-gray-200">ESCRÍBEME</a></li>
     </ul>
   </div>
 </header>

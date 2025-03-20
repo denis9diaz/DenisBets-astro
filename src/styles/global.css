@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'DidacGothic';
-    src: url('/fonts/DIDACTGOTHIC-REGULAR.TTF') format('truetype');
+    font-family: 'Anybody';
+    src: url('/fonts/ANYBODY-VARIABLEFONT_WDTH,WGHT.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
-  
-  body {
-    font-family: 'DidacGothic', sans-serif;
-  }
-  
+}
+
+@font-face {
+    font-family: 'Anybody';
+    src: url('/fonts/ANYBODY-ITALIC-VARIABLEFONT_WDTH,WGHT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Anybody', sans-serif;
+}
