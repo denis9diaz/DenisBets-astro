@@ -1,18 +1,108 @@
----
-
----
-
 <section class="text-white py-25 text-center min-h-screen relative px-4 md:px-12 lg:px-24">
   <div class="relative z-10">
     <h1 class="text-5xl font-bold mb-7 drop-shadow-[0_0_6px_grey]">TIPSTER PREMIUM DE APUESTAS DEPORTIVAS</h1>
     <h2 class="text-3xl font-bold mb-7 text-[#61EBA9] drop-shadow-[0_0_4px_grey]">
       Tu camino hacia la rentabilidad empieza aquí
     </h2>
-    <p class="text-xl mb-1 italic drop-shadow-[0_0_4px_grey]">
+    <p class="text-xl mb-1 italic drop-shadow-[0_0_4px_grey]" style="text-align: center;">
       Descubre los mejores pronósticos y estrategias de apuestas deportivas.
     </p>
-    <p class="text-xl mb-8 italic drop-shadow-[0_0_4px_grey]">
+    <p class="text-xl mb-8 italic drop-shadow-[0_0_4px_grey]" style="text-align: center;">
       Aumenta tu rentabilidad y conviértete en un experto con la ayuda de un pronosticador profesional.
     </p>
   </div>
+  <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-30">
+    <!-- Card 1 -->
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg card-1">
+  <span class="text-4xl mb-4 text-red-500">&#128577;</span>
+  <h2 class="text-2xl font-semibold mb-4">¿Cansado de perder dinero en tus apuestas deportivas?</h2>
+  <button class="bg-[#61EBA9] text-black py-2 px-4 rounded-full" data-index="0">Ver por qué</button>
+  <div class="mt-4 text-gray-300 hidden" id="text-0">
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Es frustrante, ¿verdad? Pasas horas analizando estadísticas, revisando las últimas noticias de los equipos y jugadores, e incluso sigues los consejos de diferentes "expertos".</p>
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Sin embargo, cuando llega el momento de la verdad, los resultados no son los que esperabas. Las apuestas deportivas suelen ser impredecibles y sin la estrategia correcta, tus esfuerzos pueden verse desperdiciados.</p>
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Esto deja una sensación de impotencia y de pérdida.</p>
+  </div>
+</div>
+
+<!-- Card 2 -->
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg card-2">
+  <span class="text-4xl mb-4 text-yellow-500">&#9888;&#65039;</span>
+  <h2 class="text-2xl font-semibold mb-4">Las consecuencias de no tener una estrategia sólida</h2>
+  <button class="bg-[#61EBA9] text-black py-2 px-4 rounded-full" data-index="1">Ver consecuencias</button>
+  <div class="mt-4 text-gray-300 hidden" id="text-1">
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Si continúas apostando sin un plan bien estructurado, es probable que sigas viendo cómo tus fondos disminuyen semana tras semana.</p>
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Cada apuesta fallida no solo afecta a tu cuenta bancaria, sino también a tu confianza y disfrute del deporte.</p>
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Al final, podrías sentirte tentado a abandonar por completo, perdiendo la oportunidad de hacer de las apuestas deportivas una actividad rentable y emocionante.</p>
+  </div>
+</div>
+
+<!-- Card 3 -->
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg card-3">
+  <span class="text-4xl mb-4 text-green-500">&#9989;</span>
+  <h2 class="text-2xl font-semibold mb-4">La solución que transformará tu forma de apostar</h2>
+  <button class="bg-[#61EBA9] text-black py-2 px-4 rounded-full" data-index="2">Ver solución</button>
+  <div class="mt-4 text-gray-300 hidden" id="text-2">
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Imagina tener acceso a pronósticos basados en análisis estadísticos profundos y estrategias comprobadas que te guíen en cada apuesta que realices. No más suposiciones, no más pérdidas constantes.</p>
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">En DenisBets combino mi experiencia en el análisis deportivo con técnicas avanzadas de predicción mediante probabilidad, para ofrecerte pronósticos que realmente funcionan.</p>
+    <p class="parrafo-ps" style="text-align: left; margin-bottom: 10px;">Aumentarás tus probabilidades de ganar, y apostarás con la misma confianza que apuesto yo, sabiendo que puedes perder apuestas (y las perderás) pero que a final de mes estarás en positivo.</p>
+  </div>
+</div>
 </section>
+
+<!-- Script para controlar la visibilidad del texto -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Función para mostrar/ocultar el texto de una tarjeta específica
+    function toggleText(button: HTMLButtonElement) {
+      const index = button.getAttribute("data-index");
+      const textDiv = document.getElementById(`text-${index}`);
+      const allCards = document.querySelectorAll('.card'); // Selecciona todas las tarjetas
+
+      // Cerrar todos los textos antes de abrir el seleccionado
+      allCards.forEach(function(card) {
+        const cardText = card.querySelector('.mt-4');
+        if (cardText) {
+          cardText.classList.add('hidden'); // Cierra todos los textos
+        }
+      });
+
+      // Alternar la clase 'hidden' para mostrar u ocultar el texto de la tarjeta seleccionada
+      if (textDiv) {
+        textDiv.classList.toggle('hidden');
+      }
+
+      // Cambiar el texto del botón dependiendo del estado
+      const isHidden = textDiv && textDiv.classList.contains('hidden');
+      button.textContent = isHidden ? 
+        (index === "0" ? "Ver por qué" :
+        (index === "1" ? "Ver consecuencias" :
+        (index === "2" ? "Ver solución" : "Ver por qué"))) : 
+        "Cerrar";
+    }
+
+    // Añadir event listeners a los botones para cada tarjeta
+    const card1Button = document.querySelector('.card-1 button');
+    if (card1Button) {
+      card1Button.addEventListener('click', function(event) {
+        const button = event.currentTarget as HTMLButtonElement; // Aseguramos el tipo
+        toggleText(button); // Llamamos a la función con el botón
+      });
+    }
+
+    const card2Button = document.querySelector('.card-2 button');
+    if (card2Button) {
+      card2Button.addEventListener('click', function(event) {
+        const button = event.currentTarget as HTMLButtonElement; // Aseguramos el tipo
+        toggleText(button); // Llamamos a la función con el botón
+      });
+    }
+
+    const card3Button = document.querySelector('.card-3 button');
+    if (card3Button) {
+      card3Button.addEventListener('click', function(event) {
+        const button = event.currentTarget as HTMLButtonElement; // Aseguramos el tipo
+        toggleText(button); // Llamamos a la función con el botón
+      });
+    }
+  });
+</script>
